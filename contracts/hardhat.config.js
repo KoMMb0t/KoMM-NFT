@@ -1,6 +1,8 @@
-import "@nomicfoundation/hardhat-ethers";
-import "@nomicfoundation/hardhat-verify";
 import dotenv from "dotenv";
+import hardhatEthers from "@nomicfoundation/hardhat-ethers";
+import hardhatVerify from "@nomicfoundation/hardhat-verify";
+import hardhatMocha from "@nomicfoundation/hardhat-mocha";
+
 dotenv.config();
 
 const PRIVATE_KEY = process.env.DEPLOYER_PRIVATE_KEY || "0x0000000000000000000000000000000000000000000000000000000000000001";
@@ -16,6 +18,11 @@ const config = {
       },
     },
   },
+  plugins: [
+    hardhatEthers,
+    hardhatVerify,
+    hardhatMocha,
+  ],
   networks: {
     hardhat: {
       type: "edr-simulated",
