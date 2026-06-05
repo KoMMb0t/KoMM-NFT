@@ -1,0 +1,53 @@
+{
+  "$schema": "https://raw.githubusercontent.com/nicegui/nicegui/main/tauri.conf.json",
+  "productName": "KoMMcreator",
+  "version": "0.1.0",
+  "identifier": "com.komm.creator",
+  "build": {
+    "frontendDist": "../dist",
+    "devUrl": "http://localhost:5173",
+    "beforeDevCommand": "npm run dev",
+    "beforeBuildCommand": "npm run build"
+  },
+  "app": {
+    "title": "KoMMcreator",
+    "windows": [
+      {
+        "title": "KoMMcreator – NFT Creator",
+        "width": 1280,
+        "height": 800,
+        "minWidth": 900,
+        "minHeight": 600,
+        "resizable": true,
+        "fullscreen": false
+      }
+    ],
+    "security": {
+      "csp": "default-src 'self'; connect-src 'self' https://*.walletconnect.com https://*.infura.io https://*.alchemy.com https://polygon-rpc.com https://eth.llamarpc.com https://*.base.org https://*.arbitrum.io https://*.optimism.io https://*.binance.org https://*.avax.network https://api.pinata.cloud https://arweave.net; img-src 'self' data: https://ipfs.io https://arweave.net; style-src 'self' 'unsafe-inline'"
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": "all",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "linux": {
+      "deb": {
+        "depends": []
+      },
+      "appimage": {
+        "bundleMediaFramework": true
+      }
+    },
+    "windows": {
+      "certificateThumbprint": null,
+      "digestAlgorithm": "sha256",
+      "timestampUrl": ""
+    }
+  }
+}

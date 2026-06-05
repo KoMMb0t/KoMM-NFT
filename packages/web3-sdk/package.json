@@ -1,0 +1,22 @@
+{
+  "name": "@komm-nft/web3-sdk",
+  "version": "0.1.0",
+  "description": "KoMM-NFT Web3 SDK – Multi-Chain Auto-Detection, Wallet-Integration & Contract-Interaktion",
+  "type": "module",
+  "main": "./src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./chains": "./src/chains.ts",
+    "./contracts": "./src/contracts.ts",
+    "./wallet": "./src/wallet.ts",
+    "./lazy-mint": "./src/lazy-mint.ts"
+  },
+  "dependencies": {
+    "viem": "^2.0.0",
+    "@wagmi/core": "^2.0.0",
+    "@web3modal/wagmi": "^5.0.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  }
+}
