@@ -97,6 +97,12 @@ const config = {
       chainId: 43114,
       accounts: [PRIVATE_KEY],
     },
+    kommocto: {
+      type: "http",
+      url: "https://rpc.kommoctochain.io",
+      chainId: 212121,
+      accounts: [PRIVATE_KEY],
+    },
   },
   etherscan: {
     apiKey: {
